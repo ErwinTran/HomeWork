@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">HomeWork</string>
+    <string name="app_name">Hey thats pretty good</string>
+    <string name="title_entry">Title</string>
+    <string name="desc_entry">Description</string>
+    <string name="date_entry">Due Date</string>
 </resources>
