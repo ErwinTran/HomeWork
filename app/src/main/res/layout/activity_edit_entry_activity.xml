@@ -10,16 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.home.erwin.homework.EditEntryActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:id="@+id/editText" />
-
     <TextView
         android:text="@string/title_entry"
         android:layout_width="wrap_content"
@@ -27,60 +17,97 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/usual_text_size" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:textSize="@dimen/usual_input_size"
+        android:padding="2dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/edittextborder"
+        android:id="@+id/TitleTV"/>
+
 
     <TextView
         android:text="@string/desc_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/TitleTV"
         android:layout_marginTop="18dp"
         android:id="@+id/textView2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/usual_text_size" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
+        android:textSize="@dimen/usual_input_size"
+        android:padding="2dp"
+        android:id="@+id/DescriptionTV"
         android:layout_below="@+id/textView2"
-        android:id="@+id/editText2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/edittextborder"/>
 
     <TextView
         android:text="@string/date_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/DescriptionTV"
         android:layout_marginTop="18dp"
         android:id="@+id/textView3"
         android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/usual_text_size" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="date"
-        android:ems="10"
+        android:ems="5"
+        android:textSize="@dimen/usual_input_size"
+        android:padding="2dp"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true"
-        android:id="@+id/editText3" />
+        android:id="@+id/DateTV"
+        android:background="@drawable/edittextborder"/>
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button7" />
+        android:layout_alignParentStart="true">
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button8"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/CancelBT"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/usual_button_text_size"
+            android:textColor="#FFF"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/SaveBT"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/usual_button_text_size"
+            android:textColor="#FFF"
+            android:layout_weight="1" />
+    </LinearLayout>
 
 </RelativeLayout>
