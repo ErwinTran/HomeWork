@@ -1,7 +1,9 @@
-package com.home.erwin.homework;
+package com.home.erwin.homework.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.home.erwin.homework.R;
 
 public class EditEntryActivity extends AppCompatActivity {
 

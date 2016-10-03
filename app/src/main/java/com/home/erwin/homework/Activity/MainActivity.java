@@ -1,10 +1,12 @@
-package com.home.erwin.homework;
+package com.home.erwin.homework.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.home.erwin.homework.R;
 
 public class MainActivity extends AppCompatActivity {
 
