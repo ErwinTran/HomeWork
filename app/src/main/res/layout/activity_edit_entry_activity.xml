@@ -30,36 +30,24 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:background="@drawable/edittextborder"
-        android:id="@+id/TitleTV"/>
+        android:id="@+id/titleTv"/>
 
 
     <TextView
         android:text="@string/desc_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TitleTV"
+        android:layout_below="@+id/titleTv"
         android:layout_marginTop="18dp"
         android:id="@+id/textView2"
         android:layout_alignParentStart="true"
         android:textSize="@dimen/usual_text_size" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:textSize="@dimen/usual_input_size"
-        android:padding="2dp"
-        android:id="@+id/DescriptionTV"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/edittextborder"/>
-
     <TextView
         android:text="@string/date_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/DescriptionTV"
+        android:layout_below="@+id/descriptionTv"
         android:layout_marginTop="18dp"
         android:id="@+id/textView3"
         android:layout_alignEnd="@+id/textView2"
@@ -75,7 +63,7 @@
         android:padding="2dp"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true"
-        android:id="@+id/DateTV"
+        android:id="@+id/dateTv"
         android:background="@drawable/edittextborder"/>
 
     <LinearLayout
@@ -91,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/CancelBT"
+            android:id="@+id/cancelBt"
             android:background="@color/colorPrimary"
             android:textSize="@dimen/usual_button_text_size"
             android:textColor="#FFF"
@@ -103,11 +91,23 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/SaveBT"
+            android:id="@+id/saveBt"
             android:background="@color/colorPrimary"
             android:textSize="@dimen/usual_button_text_size"
             android:textColor="#FFF"
             android:layout_weight="1" />
     </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:textSize="@dimen/usual_input_size"
+        android:padding="2dp"
+        android:id="@+id/descriptionTv"
+        android:background="@drawable/edittextborder"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
