@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text=""
+        android:layout_width="@dimen/squareSide"
+        android:layout_height="@dimen/squareSide"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/colorSquare"
+        android:background="#555"/>
+
+    <TextView
+        android:text="School day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/usual_text_size"
+        android:id="@+id/weekday"
+        android:layout_marginStart="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/schoolName"
+        android:layout_alignBottom="@+id/schoolName" />
+
+    <TextView
+        android:text="School name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/usual_text_size"
+        android:id="@+id/schoolName"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/colorSquare"
+        android:layout_alignBottom="@+id/colorSquare" />
+
+</RelativeLayout>

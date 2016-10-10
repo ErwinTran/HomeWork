@@ -5,38 +5,43 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
+import com.home.erwin.homework.Model.Weekday;
 import com.home.erwin.homework.R;
 
-public class EditEntryActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+public class EditSchoolActivity extends AppCompatActivity {
+
+    private EditText schoolNameEt;
+    private Spinner schoolDaySp;
+    private Button colorPickerBt;
     private Button cancelBt;
     private Button saveBt;
-    private EditText titleTv;
-    private EditText descriptionTv;
-    private EditText dateTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_entry_activity);
+        setContentView(R.layout.activity_edit_school_activity);
 
         initializeComponents();
         initializeListeners();
     }
 
     private void initializeComponents() {
+        schoolNameEt = (EditText) findViewById(R.id.schoolNameEt);
+        schoolDaySp = (Spinner) findViewById(R.id.schoolDaySp);
+        initializeSpinner();
+        colorPickerBt = (Button) findViewById(R.id.colorPickerBt);
         cancelBt = (Button) findViewById(R.id.cancelBt);
         saveBt = (Button) findViewById(R.id.saveBt);
-
-        titleTv = (EditText) findViewById(R.id.titleTv);
-        descriptionTv = (EditText) findViewById(R.id.descriptionTv);
-        dateTv = (EditText) findViewById(R.id.dateTv);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);
@@ -44,6 +49,7 @@ public class EditEntryActivity extends AppCompatActivity {
     }
 
     private void initializeListeners() {
+
         cancelBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,14 +70,18 @@ public class EditEntryActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    private void initializeSpinner() {
+        List<String> weekdayList = new ArrayList<>();
+        weekdayList.add(Weekday.MONDAY.getString());
+        weekdayList.add(Weekday.TUESDAY.getString());
+        weekdayList.add(Weekday.WEDNESDAY.getString());
+        weekdayList.add(Weekday.THURSDAY.getString());
+        weekdayList.add(Weekday.FRIDAY.getString());
+        weekdayList.add(Weekday.SATURDAY.getString());
+        weekdayList.add(Weekday.SUNDAY.getString());
+
+        ArrayAdapter<String> weekdayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, weekdayList);
+        weekdayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        schoolDaySp.setAdapter(weekdayAdapter);
     }
 }

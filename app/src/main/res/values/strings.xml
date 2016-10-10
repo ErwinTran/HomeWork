@@ -3,4 +3,9 @@
     <string name="title_entry">Title</string>
     <string name="desc_entry">Description</string>
     <string name="date_entry">Due Date</string>
+    <string name="school_list">School List</string>
+    <string name="delete_button">Delete everything</string>
+    <string name="name_school">School Name</string>
+    <string name="day_school">Day in the week</string>
+    <string name="color_school">Color</string>
 </resources>
