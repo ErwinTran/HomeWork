@@ -8,4 +8,6 @@
     <string name="name_school">School Name</string>
     <string name="day_school">Day in the week</string>
     <string name="color_school">Color</string>
+    <string name="school_classes">Classes</string>
+    <string name="add_button">Add</string>
 </resources>

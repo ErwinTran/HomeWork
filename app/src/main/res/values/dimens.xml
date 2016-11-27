@@ -7,6 +7,7 @@
     <dimen name="usual_button_text_size">18dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="border_radius">26dp</dimen>
+    <dimen name="small_border_radius">12dp</dimen>
     <dimen name="squareSide">30dp</dimen>
 
 </resources>

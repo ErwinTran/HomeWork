@@ -47,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, CREATE_NEW_ACTIVITY_REQUEST_CODE);
             }
         });
+
+        newEntryBt.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent = new Intent(v.getContext(), EditEntryActivity.class);
+                // put extra information depending on the date
+                startActivityForResult(intent, CREATE_NEW_ACTIVITY_REQUEST_CODE);
+                return true;
+            }
+        });
     }
 
     @Override
@@ -59,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_settings:
-                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                Intent intent = new Intent(getBaseContext(), SettingsActivity.class);
                 startActivityForResult(intent, OPEN_SETTINGS_REQUEST_CODE);
                 return true;
             default:

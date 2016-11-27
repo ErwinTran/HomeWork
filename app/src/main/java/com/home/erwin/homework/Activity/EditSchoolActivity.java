@@ -42,10 +42,6 @@ public class EditSchoolActivity extends AppCompatActivity {
         colorPickerBt = (Button) findViewById(R.id.colorPickerBt);
         cancelBt = (Button) findViewById(R.id.cancelBt);
         saveBt = (Button) findViewById(R.id.saveBt);
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     private void initializeListeners() {

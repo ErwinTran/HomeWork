@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".Activity.EditEntryActivity" />
         <activity android:name=".Activity.SettingsActivity" />
-        <activity android:name=".Activity.EditSchoolActivity"></activity>
+        <activity android:name=".Activity.EditSchoolActivity" />
+        <activity android:name=".Activity.SchoolActivity"></activity>
     </application>
 
 </manifest>
