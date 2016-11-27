@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/cancelBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:background="@drawable/regularbutton"
+        android:textSize="@dimen/usual_button_text_size"
+        android:textColor="#FFF"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/inputClassName"
+        android:layout_alignStart="@+id/inputClassName" />
+
+    <Button
+        android:id="@+id/saveBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:background="@drawable/regularbutton"
+        android:textSize="@dimen/usual_button_text_size"
+        android:textColor="#FFF"
+        android:layout_alignBaseline="@+id/cancelBt"
+        android:layout_alignBottom="@+id/cancelBt"
+        android:layout_alignEnd="@+id/inputClassName" />
+
+    <EditText
+        android:id="@+id/inputClassName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="@dimen/usual_input_size"
+        android:padding="2dp"
+        android:background="@drawable/edittextborder"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/dialogText"
+        android:layout_alignStart="@+id/dialogText" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cancelBt"
+        android:layout_alignStart="@+id/cancelBt"/>
+
+    <TextView
+        android:id="@+id/dialogText"
+        android:text="New class"
+        android:textSize="@dimen/usual_text_size"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#555"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp" />
+
+</RelativeLayout>

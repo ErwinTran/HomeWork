@@ -46,6 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/schoolDay"
         android:layout_alignParentStart="true"
+        android:padding="10dp"
+        android:background="@drawable/edittextborder"
         android:id="@+id/schoolDaySp"
         android:layout_alignEnd="@+id/schoolNameEt" />
 
@@ -87,7 +89,7 @@
         android:layout_alignParentStart="true"
         android:layout_above="@+id/buttonsLl"
         android:layout_toStartOf="@+id/addClassBt"
-        android:id="@+id/schoolClassesList"/>
+        android:id="@+id/schoolClassesLv"/>
 
     <Button
         android:text="@string/add_button"
@@ -96,7 +98,7 @@
         android:textColor="#FFF"
         android:background="@drawable/regularbutton"
         android:id="@+id/addClassBt"
-        android:layout_alignTop="@+id/schoolClassesList"
+        android:layout_alignTop="@+id/schoolClassesLv"
         android:layout_alignParentEnd="true" />
 
     <LinearLayout
